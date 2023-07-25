@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/ocean.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vite App</title>
+</head>
+<body>
+<header class="header">
+    <span class="header__logo">{...}</span>
+    <span class="header__title">Swagger analog</span>
+</header>
+<section class="section">
+    <div class="query-container">
+
+        <div class="query query-get">
+            <button class="query__button">
+                <span class="query__method query__method-get">GET</span>
+                <span class="query__path">/users</span>
+                <span class="query__description">Returns all users</span>
+            </button>
+
+            <div class="response">
+                <div class="response__info">
+                    <p class="response__header">Status code:</p>
+                    <p class="response__code">200 OK</p>
+                </div>
+                <pre class="response__body-wrapper"><code class="response__body language-json"></code></pre>
+            </div>
+
+            <button class="query__execute">Execute</button>
+        </div>
+
+        <div class="query query-get">
+            <button class="query__button">
+                <span class="query__method query__method-get">GET</span>
+                <span class="query__path">/users/{userId}</span>
+                <span class="query__description">Returns user by user id</span>
+            </button>
+
+            <div class="response">
+                <div class="response__info">
+                    <p class="response__header">Status code:</p>
+                    <p class="response__code">200 OK</p>
+                </div>
+                <pre class="response__body-wrapper"><code class="response__body language-json"></code></pre>
+            </div>
+
+            <input class="request__param request__param-put" placeholder="userId" required type="text">
+
+            <button class="query__execute">Execute</button>
+        </div>
+
+        <div class="query query-post">
+            <button class="query__button">
+                <span class="query__method query__method-post">POST</span>
+                <span class="query__path">/users</span>
+                <span class="query__description">Add new user</span>
+            </button>
+
+            <div class="response">
+                <div class="response__info">
+                    <p class="response__header">Status code:</p>
+                    <p class="response__code">200 OK</p>
+                </div>
+                <pre class="response__body-wrapper"><code class="response__body language-json"></code></pre>
+            </div>
+
+            <div class="request">
+                <textarea class="request__textarea" placeholder="Enter a request" required name="" id="" cols="30"
+                          rows="10"></textarea>
+            </div>
+
+            <button class="query__execute">Execute</button>
+        </div>
+
+        <div class="query query-put">
+            <button class="query__button">
+                <span class="query__method query__method-put">PUT</span>
+                <span class="query__path">/users/{userId}</span>
+                <span class="query__description">Update user</span>
+            </button>
+            <div class="response">
+                <div class="response__info">
+                    <p class="response__header">Status code:</p>
+                    <p class="response__code">200 OK</p>
+                </div>
+                <pre class="response__body-wrapper"><code class="response__body language-json"></code></pre>
+            </div>
+            <div class="request">
+                <input class="request__param request__param-put" placeholder="userId" required type="text">
+                <textarea class="request__textarea" placeholder="Enter a request" required name="" id="" cols="30"
+                          rows="10"></textarea>
+            </div>
+
+            <button class="query__execute">Execute</button>
+        </div>
+
+        <div class="query query-delete">
+            <button class="query__button">
+                <span class="query__method query__method-delete">DELETE</span>
+                <span class="query__path">/users/{userId}</span>
+                <span class="query__description">Delete user by user id</span>
+            </button>
+
+            <div class="response">
+                <div class="response__info">
+                    <p class="response__header">Status code:</p>
+                    <p class="response__code">200 OK</p>
+                </div>
+                <pre class="response__body-wrapper"><code class="response__body language-json"></code></pre>
+            </div>
+
+            <input class="request__param request__param-delete" placeholder="userId" required type="text">
+            <button class="query__execute">Execute</button>
+        </div>
+    </div>
+</section>
+<script type="module" src="/main.js"></script>
+</body>
+</html>
